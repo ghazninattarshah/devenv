@@ -17,7 +17,7 @@ docker-compose down
 docker-compose logs -f
 ```
 
-## Monitorrunning container stats
+## Monitor running container stats
 ```
 docker stats
 ```
