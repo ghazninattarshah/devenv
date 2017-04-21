@@ -1,0 +1,22 @@
+version : "3"
+
+services:
+
+  oracle:
+    build: ./oraclexe
+    ports:
+      - "49160:22"
+      - "49161:1521"
+    environment:
+      - ORACLE_ALLOW_REMOTE=true
+    volumes:
+      - "oracle:/u01/app/oracle"
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: "bridge"
+
+volumes:
+  oracle:
